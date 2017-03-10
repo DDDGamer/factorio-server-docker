@@ -37,7 +37,7 @@ Server Config (restart server after modifying)
 
 ## Saves
 
-A new map named `_autosave1.zip` is generated the first time the server is started. The `map-gen-settings.json` file in `/tmp/factorio/config` is used for the map settings. On subsequent runs the newest save is used.
+A new map named `_autosave1.zip` is generated the first time the server is started. The `map-gen-settings.json` file in `/factorio/config` is used for the map settings. On subsequent runs the newest save is used.
 
 To load an old save stop the server and run the command `touch oldsave.zip`. This resets the date. Then restart the server. Another option is to delete all saves except one.
 
@@ -58,11 +58,11 @@ To keep things simple, the container uses a single volume mounted at `/factorio`
     |-- config
     |   |-- map-gen-settings.json
     |   |-- rconpw
-    |   `-- server-settings.json
+    |   |-- server-settings.json
     |-- mods
-    |   `-- fancymod.zip
-    `-- saves
-        `-- _autosave1.zip
+    |   |-- fancymod.zip
+    |-- saves
+        |-- _autosave1.zip
 
 
 
